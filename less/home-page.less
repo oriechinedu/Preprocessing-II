@@ -5,18 +5,19 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    
 
    
     
     .text-content {
       width: 48%;
       padding-right: 1%;
+      .mobile-width();
     }
-
     .img-content {
       width: 48%;
       padding-left: 1%;
-
+      .mobile-width();
       img {
         border-radius: 10px;
       }
@@ -36,12 +37,18 @@
       padding-right: 1%;
       padding-left: 0;
     }
+    @media @mobile {
+      .display-flex(column-reverse, center, center );
+    }
   }
 
   .content-destination {
     width: 75%;
     margin: 0 auto 30px;
-
+    @media @mobile {
+      width: 100%;
+      margin: 0 auto;
+    }
     img {
       border-radius: 10px;
     }
@@ -52,13 +59,18 @@
     border-top: 2px dashed @navigation-border;
     display: flex;
     justify-content: space-between;
-
+    flex-wrap: wrap;
+    @media @mobile {
+      padding: 2rem 2.5rem;
+    }
     .destination {
       width: 30%;
+      .mobile-width();
       margin-bottom: 30px;
     }
     .btn {
       .create-action-btn(@eastern-blue);
+      .mobile-width();
       &:hover {
         .animate-hover();
       }
