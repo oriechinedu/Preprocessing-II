@@ -20,10 +20,8 @@
     @media @mobile {
       .display-flex(column, center, center);
     }
-
     .navbar {
       .display-flex(row, space-between, flex-start);
-
       @media @mobile {
         justify-content: space-evenly;
         align-items    : center;
@@ -40,7 +38,7 @@
         font-weight    : bold;
 
         &:hover {
-          .animate-hover();
+          .animate-hover(1.1, 1);
         }
       }
     }
@@ -55,7 +53,7 @@
       }
 
       &:hover {
-        .animate-hover();
+        .animate-hover(1.1, 1);
       }
     }
   }
