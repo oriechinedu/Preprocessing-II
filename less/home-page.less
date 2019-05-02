@@ -6,9 +6,6 @@
     flex-wrap: wrap;
     justify-content: space-between;
     
-
-   
-    
     .text-content {
       width: 48%;
       padding-right: 1%;
@@ -80,6 +77,38 @@
     width: 100%;
     .header-img {
       object-fit: cover;
+    }
+  }
+  .vacation-form {
+    width: 100%;
+    margin: 2rem auto;
+    .form-container {
+      form {
+        width: 100%;
+      }
+      width: 80%;
+      margin: 0 auto;
+      .form-group {
+        width: 100%;
+        .display-flex(column, center, center);
+        .btn {
+          .create-action-btn(@eastern-blue);
+          padding: 1rem 4rem;
+          .mobile-width();
+          &:hover {
+            .animate-hover(1.1, 1);
+          }
+        }
+        .form-control {
+          padding: 1rem 2rem;
+          margin: 0.8rem auto;
+          width: 100%;
+          border-radius: 4px;
+          outline: none;
+          border: 1px solid @sandy-beach;
+          font-size: 1.5rem;
+        }
+      }
     }
   }
 }// home
