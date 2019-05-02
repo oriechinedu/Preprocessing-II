@@ -1,1 +1,31 @@
 // Mixins in here
+
+.display-flex(@flexDir, @justifyContent, @alignItems) {
+  display        : flex;
+  flex-direction : @flexDir;
+  justify-content: @justifyContent;
+  align-items    : @alignItems;
+  flex-wrap      : wrap;
+}
+
+.mobile-width() {
+  @media @mobile {
+    width: 100%;
+  }
+}
+
+.animate-hover(@x, @y) {
+  transform : scale(@x, @y);
+  transition: 0.2 ease-in-out;
+}
+
+.create-action-btn(@bgColor) {
+  background-color: @bgColor;
+  padding: 1rem 3rem;
+  border-radius: 1rem;
+  font-size: 2rem;
+  color: @white;
+  text-align: center;
+  width: max-content; 
+
+}
