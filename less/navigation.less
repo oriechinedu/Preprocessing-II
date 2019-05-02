@@ -1,1 +1,47 @@
 // Navigation Styles here
+
+.nav-container {
+  width        : 900px;
+  margin       : 0 auto;
+  padding      : 3rem 0;
+  border-bottom: 2px dashed @silver;
+  .mobile-display();
+
+  .navigation {
+    width: @desktopWidth;
+    .mobile-display();
+    margin: 0 auto;
+    .display-flex(row, space-between, center);
+
+    .navbar {
+      .display-flex(row, space-between, flex-start);
+      padding-right: 4rem;
+
+      >.nav-link {
+        text-decoration: none;
+        color          : @font-color;
+        padding        : 0 1rem;
+        font-size      : 1.5rem;
+        font-weight    : bold;
+
+        &:hover {
+          .animate-hover();
+        }
+      }
+    }
+
+    .logo {
+      >a {
+        font-size      : 4rem;
+        text-decoration: none;
+        font-weight    : bold;
+        color          : @font-color;
+        font-family    : @title-font;
+      }
+
+      &:hover {
+        .animate-hover();
+      }
+    }
+  }
+}

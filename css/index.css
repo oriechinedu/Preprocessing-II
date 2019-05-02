@@ -1,3 +1,7 @@
+.animate-hover {
+  transform: scale(1.2, 1);
+  transition: 0.2 ease-in-out;
+}
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -168,6 +172,61 @@ img {
   width: 100%;
   margin: 0 auto;
 }
+.nav-container {
+  width: 900px;
+  margin: 0 auto;
+  padding: 3rem 0;
+  border-bottom: 2px dashed #C0C0C0;
+}
+@media (max-width: 500px) {
+  .nav-container {
+    width: 100%;
+  }
+}
+.nav-container .navigation {
+  width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+@media (max-width: 500px) {
+  .nav-container .navigation {
+    width: 100%;
+  }
+}
+.nav-container .navigation .navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding-right: 4rem;
+}
+.nav-container .navigation .navbar > .nav-link {
+  text-decoration: none;
+  color: #212529;
+  padding: 0 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.nav-container .navigation .navbar > .nav-link:hover {
+  transform: scale(1.2, 1);
+  transition: 0.2 ease-in-out;
+}
+.nav-container .navigation .logo > a {
+  font-size: 4rem;
+  text-decoration: none;
+  font-weight: bold;
+  color: #212529;
+  font-family: 'Indie Flower', cursive;
+}
+.nav-container .navigation .logo:hover {
+  transform: scale(1.2, 1);
+  transition: 0.2 ease-in-out;
+}
 .footer {
   width: 100%;
   border-top: 2px dashed silver;
@@ -224,4 +283,23 @@ img {
 .home .content-pick .destination {
   width: 30%;
   margin-bottom: 30px;
+}
+.home .content-pick .btn {
+  background-color: #17A2B8;
+  padding: 1rem 3rem;
+  border-radius: 1rem;
+  font-size: 2rem;
+  color: #FFFFFF;
+  text-align: center;
+  width: max-content;
+}
+.home .content-pick .btn:hover {
+  transform: scale(1.2, 1);
+  transition: 0.2 ease-in-out;
+}
+.home #header {
+  width: 100%;
+}
+.home #header .header-img {
+  object-fit: cover;
 }
